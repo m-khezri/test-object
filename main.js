@@ -17,15 +17,20 @@ const printToDom = (stringToPrint, divId) => {
 };
 
 
-const car_color = () => 
+const car_color = () => {
+
     let newString ='';
+    
+
     for (let i=0; i < colors.length; i++) {
-        newString += `<div id="output">`;
-        newString += `<p>${colors[i]}</p>`;
-        newString += `</div>`; 
+        newString += `<iv id="output">`;
+        newString += `<p>${colors[i]}</p>`;  
+        newString += `</iv>`;
     }
     printToDom(newString,"output");
 }
 
-
 car_color();
+
+
+
