@@ -1,39 +1,31 @@
-let BMW_car = {
-    benz: ["c300", "S500", "gla250"],
-    color: "blue",
-    model: "bmw",
-    size: "sedan",
-    year: 2016,
-    origin: "germany",
-    title: "clean",
-    price: 45000
+
+    let colors = ["blue", "white", "red", "black", "yellow", "silver"];
+    let series = ["1","2","3","4","5","6","7","8","X1","X2","X3","X4","X5","X6","Z4","i3","i8"];
+//     let bmw = [
+//     {
+//     type: "sedan",
+//     year: "2016",
+//     title: "clean",
+//     price: 45000
+//     },
+// ];
+
+
+const printToDom = (stringToPrint, divId) => {
+    const selectedDiv = document.getElementById(divId);
+    selectedDiv.innerHTML = stringToPrint
 };
-    // What is this? Is it an array?
 
-    // const printcar = () => {
 
-    //     let str ="";
-    //     str += `<p>${car.model}</p>`;
-    //     str += `<p>${car.size}</p>`;
-
-    //     str += `<p>${car.benz[1]}</p>`;
-
-    //     document.getElementById("output").innerHTML=str;
-    // }
-
-    // printcar();
-
-    
-    const printcar = (car) => {
-
-        let str ="";
-        str += `<p>${car.model}</p>`;
-        str += `<p>${car.size}</p>`;
-
-        str += `<p>${car.benz[1]}</p>`;
-
-        document.getElementById("output").innerHTML=str;
+const car_color = () => 
+    let newString ='';
+    for (let i=0; i < colors.length; i++) {
+        newString += `<div id="output">`;
+        newString += `<p>${colors[i]}</p>`;
+        newString += `</div>`; 
     }
+    printToDom(newString,"output");
+}
 
-    printcar(BMW_car);
 
+car_color();
